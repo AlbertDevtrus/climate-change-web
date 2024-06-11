@@ -1,0 +1,9 @@
+.celcius {
+  position: absolute;
+  top: 30vh;
+  right: 33vw;
+  width: 40px;
+  height: 40px;
+  border: 8px solid white;
+  border-radius: 50%;
+}
