@@ -1,6 +1,6 @@
 .selector {
-  position: absolute;
+  position: fixed;
   top: var(--top);
   left: var(--left);
-  transition: all 0.3s cubic-bezier(0,.57,.4,.94);
+  transition: all 0.4s cubic-bezier(.72,.59,.48,.94);
 }
