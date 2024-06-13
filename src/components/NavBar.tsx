@@ -6,8 +6,6 @@ import { ChartIcon, EarthIcon, InfoIcon, TempIcon } from "./Icons";
 import React, { useEffect } from "react";
 import { motion, useAnimate, useMotionValue, useTransform } from "framer-motion";
 
-// TODO: Change the form of selector when moving
-
 export default function NavBar() {
 
   const [scope, animate] = useAnimate();
@@ -72,16 +70,6 @@ export default function NavBar() {
     
       animate(sequence, { duration: 0.6 });
     }
-
-
-
-    // animate(scope.current, {
-    //   y: top - (height * 0.26), 
-    //   x: left - (width * 0.26),
-    //   scaleX: [1, 0.8],
-    //   scaleY: [1, 1.3],
-    // }, { duration: 2, type: 'spring' })
-
   }
 
   useEffect(() => {
