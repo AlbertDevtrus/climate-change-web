@@ -10,10 +10,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
+} from 'chart.js'
 import type { ChartData, ChartOptions } from 'chart.js';
-
-
 
 ChartJS.register(
   CategoryScale,
@@ -30,43 +28,62 @@ export default function HistoricChart() {
 
   const options: ChartOptions<'line'> = {
     responsive: true,
-    layout: {
-      padding: 0
+    scales: {
+      x: {
+        display: true,
+        ticks: {
+          color: 'white',
+          padding: 10,
+          font: {
+            size: 14
+          }
+        }
+      },
+      y: {
+        display: true,
+        ticks: {
+          padding: 10,
+          color: 'rgba(255, 255, 255, 0.5)'
+        }
+      }
     },
     plugins: {
-      legend: {
-        position: 'top' as const,
-      },
       title: {
+        text: 'Max temperature per year',
         display: true,
         color: 'white',
-        text: 'All time temperature variation.',
+        padding: {
+          top: 0,
+          bottom: 20
+        },
+        font: {
+          size: 20,
+        }
       },
-    },
-    backgroundColor: 'white',
-    color: 'rgba(255, 255, 255, 0.6)'
+      legend: {
+        labels: {
+          color: 'white',
+          boxPadding: 20
+        }
+      },
+    }
   };
 
   const data: ChartData<'line'> = {
-    labels: ['2001', '2002', '2003'],
+    labels: ['2001', '2002', '2003', '2004', '2005', '2006', '2007'],
     datasets: [
       {
         label: 'Dataset 1',
-        data: ['2001', '2002', '2003'].map(year => Number(year) * 2),
-        borderColor: 'rgba(255, 99, 132, 0.5)',
-        backgroundColor: 'rgb(255, 99, 132)',
-      },
-      {
-        label: 'Dataset 2',
-        data: ['2001', '2002', '2003'].map(year => Number(year) * 3),
-        borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      },
+        data: [2332, 2380, 2290, 2432, 2124, 2340, 2894],
+        borderColor: 'rgba(255, 0, 0, 0.2)',
+        backgroundColor: 'rgb(255, 0, 0)',
+        hoverBorderWidth: 20
+      }
     ],
   };
 
   return (
-    <div className='flex items-center justify-center bg-[#BBBBBB] bg-opacity-20 p-8 rounded-[40px]'>
+    <div className='flex items-center justify-center bg-[#BBBBBB] bg-opacity-20 p-8 rounded-[40px] w-[900px] h-[450px]'>
       <Line
         options={options}
         data={data} 
