@@ -8,7 +8,6 @@ import {
   motion,
   useAnimate,
   useMotionValue,
-  useTransform,
 } from "framer-motion";
 
 export default function NavBar() {

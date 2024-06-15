@@ -12,6 +12,13 @@ import {
   Legend,
 } from 'chart.js'
 import type { ChartData, ChartOptions } from 'chart.js';
+import { defaults } from 'chart.js';
+import { Raleway } from 'next/font/google';
+
+const raleway = Raleway({
+  weight: ['400', '700'],
+  subsets: ['latin']
+})
 
 ChartJS.register(
   CategoryScale,
@@ -23,6 +30,7 @@ ChartJS.register(
   Legend
 );
 
+defaults.font.family = 'Roboto';
 
 export default function HistoricChart() {
 
@@ -35,7 +43,8 @@ export default function HistoricChart() {
           color: 'white',
           padding: 10,
           font: {
-            size: 14
+            weight: 400,
+            size: 12,
           }
         }
       },
@@ -43,7 +52,11 @@ export default function HistoricChart() {
         display: true,
         ticks: {
           padding: 10,
-          color: 'rgba(255, 255, 255, 0.5)'
+          color: 'rgba(255, 255, 255, 0.8)',
+          font: {
+            weight: 400,
+            size: 10,
+          }
         }
       }
     },
@@ -51,19 +64,20 @@ export default function HistoricChart() {
       title: {
         text: 'Max temperature per year',
         display: true,
-        color: 'white',
+        color: 'rgba(255, 255, 255, 0.9)',
         padding: {
           top: 0,
           bottom: 20
         },
         font: {
-          size: 20,
+          weight: 400,
+          size: 16,
         }
       },
       legend: {
         labels: {
           color: 'white',
-          boxPadding: 20
+          boxPadding: 20,
         }
       },
     }
@@ -83,7 +97,7 @@ export default function HistoricChart() {
   };
 
   return (
-    <div className='flex items-center justify-center bg-[#BBBBBB] bg-opacity-20 p-8 rounded-[40px] w-[900px] h-[450px]'>
+    <div className={`${raleway.className} flex items-center justify-center bg-[#BBBBBB] bg-opacity-20 p-8 rounded-[40px] w-[900px] h-[450px]`}>
       <Line
         options={options}
         data={data} 
