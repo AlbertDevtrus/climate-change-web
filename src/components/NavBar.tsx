@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 
-import { ChartIcon, EarthIcon, InfoIcon, TempIcon } from "./Icons";
 import React, { useEffect } from "react";
 import {
   motion,
   useAnimate,
   useMotionValue,
 } from "framer-motion";
+import { TempIcon, ChartIcon, InfoIcon, EarthIcon } from "./icons/Icons";
 
 export default function NavBar() {
   const [scope, animate] = useAnimate();

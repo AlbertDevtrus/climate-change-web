@@ -1,6 +1,7 @@
-import HistorySection from "@/components/HistorySection";
-import MaxTemp from "@/components/MaxTemp";
+import HistorySection from "@/components/historic-section/HistorySection";
 import NavBar from "@/components/NavBar";
+import { CartSection } from "@/components/carts-section/CartSection";
+import MaxTemp from "@/components/MaxTemp";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <NavBar />
       <MaxTemp />
       <HistorySection />
+      <CartSection />
     </main>
   );
 }

@@ -89,15 +89,15 @@ export default function HistoricChart() {
       {
         label: 'Dataset 1',
         data: [2332, 2380, 2290, 2432, 2124, 2340, 2894],
-        borderColor: 'rgba(255, 0, 0, 0.2)',
-        backgroundColor: 'rgb(255, 0, 0)',
+        borderColor: 'rgba(0, 0, 255, 0.5)',
+        backgroundColor: 'rgb(0, 0, 255)',
         hoverBorderWidth: 20
       }
     ],
   };
 
   return (
-    <div className={`${raleway.className} flex items-center justify-center bg-[#BBBBBB] bg-opacity-20 p-8 rounded-[40px] w-[900px] h-[450px]`}>
+    <div className={`${raleway.className} flex items-center justify-center bg-[#BBBBBB] bg-opacity-30 p-8 rounded-[40px] w-[900px] h-[450px]`}>
       <Line
         options={options}
         data={data} 
