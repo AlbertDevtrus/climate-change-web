@@ -14,11 +14,11 @@ interface Props {
 
 export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => {
   return (
-    <article className={`${mavenPro.className} h-full w-5/6 overflow-hidden rounded-[45px] relative p-16 flex flex-col`}>
-      <h2 className='text-slate-50 z-10 relative font-semibold uppercase text-6xl text-balance w-1/3 h-1/3 self-start tracking-tighter'>
+    <article className={`${mavenPro.className} h-[85vh] w-5/6 overflow-hidden rounded-[45px] relative p-16 flex flex-col`}>
+      <h2 className='text-slate-50 z-10 relative font-semibold uppercase text-6xl text-balance w-2/5 h-1/3 self-start tracking-tighter'>
         {title}
       </h2>
-      <div className='w-full h-full text-slate-50 z-10 relative flex items-end justify-between'>
+      <div className='w-full text-slate-50 z-10 relative flex items-end justify-between'>
         <a 
           href={href}
           target='_blank'
@@ -30,8 +30,8 @@ export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => 
             <ArrowLink size="15" />
           </div>
         </a>
-        <div className='w-52 bg-[#3D3D3D] bg-opacity-30 p-6 rounded-3xl'>
-          <h3 className='uppercase font-semibold text-3xl'>{miniTitle}</h3>
+        <div className='w-52 bg-[#3D3D3D] bg-opacity-40 p-6 rounded-3xl'>
+          <h3 className='uppercase font-semibold text-3xl text-center'>{miniTitle}</h3>
           {
             paragraphs.map((paragraph, i) => (
               <p key={i} className='text-pretty text-sm opacity-70 tracking-tighter leading-4 pt-4'>
@@ -44,8 +44,8 @@ export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => 
       <Image 
         src={image}
         alt={`Photo for the topic ${miniTitle}`}
-        width={500}
-        height={200}
+        width={5000}
+        height={5000}
         className='h-full w-full object-cover z-0 absolute top-0 left-0'
       />
       <div className='h-full w-full bg-black bg-opacity-40 z-0 absolute top-0 left-0' />
