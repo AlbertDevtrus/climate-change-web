@@ -65,13 +65,15 @@ export default function NavBar() {
 
     const { top, left, width, height } = link!.getBoundingClientRect();
 
-    animate(scope.current, { y: top - height * 0.26, x: left - width * 0.26 });
+    animate(scope.current, { y: top - height * 0.26, x: left - width * 0.26 }, { duration: 0 });
+    animate(scope.current, { opacity: 0.25 }, { duration: 0.5 });
+
   }, [animate, scope]);
 
   return (
     <>
       <motion.div
-        className={`bg-white w-9 h-9 rounded-full opacity-25 fixed`}
+        className={`bg-white w-9 h-9 rounded-full opacity-0 fixed`}
         ref={scope}
         id="selector"
         style={{
@@ -92,7 +94,7 @@ export default function NavBar() {
             </Link>
           </li>
           <li className="text-white" onClick={moveSelector}>
-            <Link href="#">
+            <Link href="#carts-section">
               <InfoIcon />
             </Link>
           </li>

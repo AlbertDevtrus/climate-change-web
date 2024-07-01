@@ -12,7 +12,7 @@ const cards = [
   {
     id: 2,
     title: "HOW TO SOLVE IT?",
-    image: "/cards-images/red-panda.jpg",
+    image: "/cards-images/polar-bear.avif",
     href: "https://www.nrdc.org/stories/how-you-can-stop-global-warming", 
     miniTitle: "CARBON FOOTPRINT",
     paragraphs: ["Reduce your carbon footprint, walking or cycling instead of driving reduces greenhouse gas emissions.", "For longer distances, consider traveling by train or bus. And carpool whenever possible."],
@@ -29,7 +29,7 @@ const cards = [
 
 export const CartSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#BC0000] to-[#FE0000] flex flex-col items-center justify-start py-14 px-32 gap-10">
+    <section className="min-h-screen bg-gradient-to-b from-[#BC0000] to-[#FE0000] flex flex-col items-center justify-start py-14 px-32 gap-10" id="carts-section">
       
       {
         cards.map(card => (

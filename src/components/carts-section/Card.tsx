@@ -14,7 +14,7 @@ interface Props {
 
 export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => {
   return (
-    <article className={`${mavenPro.className} h-[85vh] w-5/6 overflow-hidden rounded-[45px] relative p-16 flex flex-col`}>
+    <article className={`${mavenPro.className} h-[85vh] w-5/6 overflow-hidden rounded-[30px] relative p-16 flex flex-col justify-between`}>
       <h2 className='text-slate-50 z-10 relative font-semibold uppercase text-6xl text-balance w-2/5 h-1/3 self-start tracking-tighter'>
         {title}
       </h2>
