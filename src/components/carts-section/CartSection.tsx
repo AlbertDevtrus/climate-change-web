@@ -29,18 +29,18 @@ const cards = [
 
 export const CartSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#BC0000] to-[#FE0000] flex flex-col items-center justify-start py-14 px-32 gap-10" id="carts-section">
+    <section className="min-h-screen bg-gradient-to-b from-[#BC0000] to-[#FE0000] flex flex-col items-center justify-start py-14 px-32 gap-32" id="carts-section">
       
       {
         cards.map(card => (
-          <Card 
-            key={card.id}
-            image={card.image}
-            href={card.href} 
-            title={card.title}
-            miniTitle={card.miniTitle}
-            paragraphs={card.paragraphs}
-          />
+            <Card 
+              key={card.id}
+              image={card.image}
+              href={card.href} 
+              title={card.title}
+              miniTitle={card.miniTitle}
+              paragraphs={card.paragraphs}
+            />
         ))
       }
 
