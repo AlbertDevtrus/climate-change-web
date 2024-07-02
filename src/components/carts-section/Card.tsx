@@ -55,7 +55,7 @@ export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => 
   // console.log(maxScrollY);
   
   const container = useRef(null);
-  const vertMargin = 5;
+  const vertMargin = 8;
   
   const { scrollYProgress } = useScroll({
     target: container,
@@ -68,7 +68,7 @@ export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => 
   return (
       <motion.article
         ref={container}
-        className={`${mavenPro.className} sticky h-[90vh] w-full overflow-hidden rounded-[30px] p-16 flex flex-col justify-between`}
+        className={`${mavenPro.className} sticky h-[84vh] w-11/12 overflow-hidden rounded-[30px] p-16 flex flex-col justify-between`}
         style={{
           top: `${vertMargin}vh`,
           height: `${100 - 2 * vertMargin}vh`,
