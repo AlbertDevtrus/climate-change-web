@@ -89,8 +89,8 @@ export default function HistoricChart() {
       {
         label: 'Dataset 1',
         data: [2332, 2380, 2290, 2432, 2124, 2340, 2894],
-        borderColor: 'rgba(0, 0, 255, 0.5)',
-        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgba(0, 0, 0, 0.8)',
+        backgroundColor: 'rgb(0, 0, 0)',
         hoverBorderWidth: 20
       }
     ],

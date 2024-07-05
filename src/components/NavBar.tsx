@@ -5,8 +5,8 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { motion, useAnimate, useMotionValue } from "framer-motion";
 import { TempIcon, ChartIcon, InfoIcon, EarthIcon } from "./icons/Icons";
+import { getLocomotiveScroll } from "@/utilitys";
 
-import { getLocomotiveScroll } from "@/utilitys/locomotiveScroll";
 
 export default function NavBar() {
   const [scope, animate] = useAnimate();
@@ -91,7 +91,7 @@ export default function NavBar() {
   return (
     <>
       <motion.div
-        className={`bg-white w-9 h-9 rounded-full opacity-0 fixed`}
+        className={`bg-white w-9 h-9 rounded-full opacity-0 fixed z-20`}
         ref={scope}
         id="selector"
         style={{
@@ -99,7 +99,7 @@ export default function NavBar() {
           scaleY: scale.y,
         }}
       />
-      <nav className="fixed right-14 bottom-1/3">
+      <nav className="fixed right-14 bottom-1/3 z-20">
         <ul className="flex flex-col gap-8">
           <li className="text-white first" onClick={(e) => moveSelector(e, '#max-temp')}>
             <a href="#max-temp">

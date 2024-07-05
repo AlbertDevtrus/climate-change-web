@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  scroll-snap-type: mandatory;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   background-color: #6f00008d;

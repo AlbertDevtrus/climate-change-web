@@ -29,7 +29,7 @@ const cards = [
 
 export const CartSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#BC0000] to-[#73DB01] flex flex-col items-center justify-start py-14 px-32 gap-32" id="carts-section">
+    <section className="min-h-screen bg-gradient-to-b from-[#FE0000] to-[#73DB01] flex flex-col items-center justify-start py-14 px-32 gap-32" id="carts-section">
       
       {
         cards.map(card => (

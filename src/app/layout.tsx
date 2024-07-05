@@ -16,12 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-        <body className={`${inter.className} bg-black`}>
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
-        </body>
-    </html>
+    <SmoothScroll>
+      <html lang="en">
+          <body className={`${inter.className} bg-black`}>
+              {children}
+          </body>
+      </html>
+    </SmoothScroll>
   );
 }

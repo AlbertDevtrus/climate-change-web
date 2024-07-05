@@ -5,7 +5,9 @@ import { useEffect, useRef, useState } from 'react';
 import { Maven_Pro } from "next/font/google";
 
 import { ArrowLink } from '../icons';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ButtonLink } from '../ButtonLink';
+
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -19,41 +21,6 @@ interface Props {
 
 export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => {
 
-  // const [maxScrollY, setMaxScrollY] = useState(Infinity)
-  // const [dynamicStyles, setDynamicStyles] = useState({ scale: 1, filter: 0 })
-
-  
-  // const { scrollY } = useScroll({
-    //   target: container
-  // });
-
-  // const isInView = useInView(container, {
-    //   margin: `0px 0px -${100 - vertMargin}% 0px`,
-    //   once: true
-  // })
-
-  // scrollY.on('change', (scrollY) => {
-  //   let animationValue = 1;
-  
-  //   if(scrollY > maxScrollY) {
-  //     animationValue = Math.max(0, 1 - (scrollY - maxScrollY) / 7000)
-  //   }
-  
-  //   setDynamicStyles({
-    //     scale: animationValue,
-    //     filter: (1 - animationValue) * 100
-    //   })
-    // });
-    
-  // useEffect(() => {
-  //   if(isInView) {
-  //     setMaxScrollY(scrollY.get());
-  //   }
-
-  // }, [isInView, scrollY, maxScrollY])
-  
-  // console.log(maxScrollY);
-  
   const container = useRef(null);
   const vertMargin = 8;
   
@@ -63,7 +30,6 @@ export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => 
   })
   
   const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const blur = useTransform(scrollYProgress, [0, 1], [0, 1]);
   
   return (
       <motion.article
@@ -79,17 +45,10 @@ export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => 
           {title}
         </h2>
         <div className='w-full text-slate-50 z-10 relative flex items-end justify-between'>
-          <a 
-            href={href}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='bg-white text-black px-5 py-1 rounded-3xl text-lg font-medium flex items-center gap-3 transition-all duration-300 tracking-tighter hover:bg-gray-300 ml-10'
-          >
-            Learn more
-            <div>
-              <ArrowLink size="15" />
-            </div>
-          </a>
+          <div className='ml-10'>
+            <ButtonLink href={href} />
+
+          </div>
           <div className='w-52 bg-[#3D3D3D] bg-opacity-40 p-6 rounded-3xl'>
             <h3 className='uppercase font-semibold text-3xl text-center'>{miniTitle}</h3>
             {

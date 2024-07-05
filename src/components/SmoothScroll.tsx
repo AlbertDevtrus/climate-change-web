@@ -1,17 +1,17 @@
 "use client";
 
-import { getLocomotiveScroll } from "@/utilitys/locomotiveScroll";
-import React, { useEffect, useRef } from "react";
+import { getLocomotiveScroll } from "@/utilitys/getLocomotiveScroll";
+import React, { useEffect } from "react";
 
 interface Props {
   children: React.ReactNode;
 }
 
-export const SmoothScroll = ({ children }: Props) => {
-
+export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    getLocomotiveScroll();
+    (async () => {
+      getLocomotiveScroll();
+    })();
   }, []);
-
-  return <div>{children}</div>;
-};
+  return <>{children}</>;
+}
