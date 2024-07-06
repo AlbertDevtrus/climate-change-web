@@ -67,7 +67,7 @@ export const Card = ( { image, href, title, miniTitle, paragraphs }: Props ) => 
           height={5000}
           className='h-full w-full object-cover z-0 absolute top-0 left-0'
         />
-        <div className='h-full w-full bg-black bg-opacity-40 z-0 absolute top-0 left-0' />
+        <div className='h-full w-full bg-black bg-opacity-50 z-0 absolute top-0 left-0' />
       </motion.article>
   )
 }

@@ -97,7 +97,7 @@ export default function HistoricChart() {
   };
 
   return (
-    <div className={`${raleway.className} flex items-center justify-center bg-[#BBBBBB] bg-opacity-30 p-8 rounded-[40px] w-[900px] h-[450px]`}>
+    <div className={`${raleway.className} flex items-center justify-center bg-[#BBBBBB] bg-opacity-30 p-8 rounded-[40px] w-[900px] h-[450px]`} id='max-temp-chart'>
       <Line
         options={options}
         data={data} 

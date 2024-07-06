@@ -3,6 +3,7 @@ declare module 'locomotive-scroll' {
     behavior?: 'auto' | 'smooth'
     top?: number
     left?: number
+    offset?: number
   }
 
   export interface ILocomotiveScrollOptions {

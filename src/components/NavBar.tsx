@@ -72,7 +72,11 @@ export default function NavBar() {
 
     const locomotiveScroll = await getLocomotiveScroll();
 
-    locomotiveScroll.scrollTo(href)
+    if(href === '#max-temp-chart') {
+      locomotiveScroll.scrollTo(href, { offset: -120 });
+    } else {
+      locomotiveScroll.scrollTo(href);
+    }
   };
 
   useEffect(() => {
@@ -106,8 +110,8 @@ export default function NavBar() {
               <TempIcon />
             </a>
           </li>
-          <li className="text-white" onClick={(e) => moveSelector(e, '#historic-chart')}>
-            <Link href="#historic-chart">
+          <li className="text-white" onClick={(e) => moveSelector(e, '#max-temp-chart')}>
+            <Link href="#max-temp-chart">
               <ChartIcon />
             </Link>
           </li>
